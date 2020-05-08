@@ -12,7 +12,7 @@
                   <blockquote class="blockquote mb-0">
                     <p>{{quote.quote}}</p>
                     <footer class="blockquote-footer"><cite title="Source Title">{{quote.author}}</cite></footer>
-                    <small style="float: right;" (click)="toggleDetails(i)">see more</small>
+                    <small style="float: right;" (click)="toggleDetails(i)" [ngStyle]="{'innerHTML': textContent}">see more</small>
                   </blockquote>
                 </div>
                 <app-quote-details *ngIf='quote.showDetails' [quote]='quote' (deleteQuote) ='quoteDeleted($event,i)'></app-quote-details>  

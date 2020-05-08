@@ -14,6 +14,14 @@ export class QuoteDetailsComponent implements OnInit {
   Delete(yesDelete:boolean){
     this.deleteQuote.emit(yesDelete);
   }
+
+  upVote(){
+    this.quote.upVote++;
+   }
+   downVote(){
+   this.quote.downVote++
+   }
+ 
   constructor() { }
 
   ngOnInit(): void {
