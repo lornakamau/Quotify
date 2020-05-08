@@ -8,6 +8,9 @@ import { Quote} from '../../models/quote';
 })
 export class QuotifyComponent implements OnInit {
 
+  public show:boolean = false;
+  public showMore:any = 'see more';
+
   quotes:Quote[] = [
     new Quote('If you can make a woman laugh, you can make her do anything.','Marilyn Monroe','Lyn Adelaide',new Date(2020,4,8),2,1),
     new Quote('There is nothing I would not do for those who are really my friends. I have no notion of loving people by halves, it is not my nature.','Jane Austen','Edrea Jakes',new Date(2020,3,30),1,5),
@@ -18,12 +21,27 @@ export class QuotifyComponent implements OnInit {
   textContent : string = 'see more'
   toggleDetails(index){
     this.quotes[index].showDetails = !this.quotes[index].showDetails;
-    this.textContent = 'see less'
+    this.show = !this.show;
+    if(this.show)  
+      this.showMore = "see less";
+    else
+      this.showMore[index] = "see more";
   }
   quoteDeleted(deleteQuote, index){
     if (deleteQuote){
       this.quotes.splice(index,1)
     }
+  }
+  highlightHighest(){
+    let quotesUpvote = []
+    let highestUpVote: number
+    for (let j = 0; j < this.quotes.length; j++){
+      quotesUpvote.push(this.quotes[j].upVote)
+    }
+
+    quotesUpvote.sort(function(a,b){return b-a})
+    highestUpVote = quotesUpvote[0]
+    return highestUpVote;
   }
   constructor() { }
 

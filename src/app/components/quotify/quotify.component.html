@@ -8,13 +8,20 @@
         <div class="col-md-1"></div>
         <div class="col-md-5">
             <div class="card" *ngFor='let quote of quotes; let i= index'>
-                <div class="card-body">
+                <div class="card-body" appHighlightQuote *ngIf="highlightHighest() === quote.upVote && quote.upVote > 0">
                   <blockquote class="blockquote mb-0">
                     <p>{{quote.quote}}</p>
                     <footer class="blockquote-footer"><cite title="Source Title">{{quote.author}}</cite></footer>
-                    <small style="float: right;" (click)="toggleDetails(i)" [ngStyle]="{'innerHTML': textContent}">see more</small>
+                    <small style="float: right;" (click)="toggleDetails(i)">{{showMore}}</small>
                   </blockquote>
                 </div>
+                <div class="card-body" *ngIf="highlightHighest() !== quote.upVote || quote.upVote === 0">
+                    <blockquote class="blockquote mb-0">
+                      <p>{{quote.quote}}</p>
+                      <footer class="blockquote-footer"><cite title="Source Title">{{quote.author}}</cite></footer>
+                      <small style="float: right;" (click)="toggleDetails(i)" [ngStyle]="{'innerHTML': textContent}">{{showMore}}</small>
+                    </blockquote>
+                  </div>
                 <app-quote-details *ngIf='quote.showDetails' [quote]='quote' (deleteQuote) ='quoteDeleted($event,i)'></app-quote-details>  
             </div>
         </div>
