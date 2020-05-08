@@ -6,7 +6,17 @@
     </div>
     <div class="row">
         <div class="col-md-1"></div>
-        <div class="col-md-5"></div>
+        <div class="col-md-5">
+            <div class="card" *ngFor='let quote of quotes; let i= index'>
+                <div class="card-body">
+                  <blockquote class="blockquote mb-0">
+                    <p>{{quote.quote}}</p>
+                    <footer class="blockquote-footer"><cite title="Source Title">{{quote.author}}</cite></footer>
+                    <small style="float: right;" (click)="toggleDetails(i)">see more</small>
+                  </blockquote>
+                </div>
+            </div>
+        </div>
         <div class="col-md-5">
             <app-quote-form></app-quote-form>
         </div>
