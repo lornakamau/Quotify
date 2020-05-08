@@ -8,6 +8,8 @@ import { QuotifyComponent } from './components/quotify/quotify.component';
 import { QuoteFormComponent } from './components/quote-form/quote-form.component';
 import { QuoteDetailsComponent } from './components/quote-details/quote-details.component';
 import { DateSubmittedPipe } from './pipes/date-submitted.pipe';
+import { HighlightVoteDirective } from './directives/highlight-vote.directive';
+import { HighlightQuoteDirective } from './directives/highlight-quote.directive';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { DateSubmittedPipe } from './pipes/date-submitted.pipe';
     QuotifyComponent,
     QuoteFormComponent,
     QuoteDetailsComponent,
-    DateSubmittedPipe
+    DateSubmittedPipe,
+    HighlightVoteDirective,
+    HighlightQuoteDirective
   ],
   imports: [
     BrowserModule,
