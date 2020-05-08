@@ -2,5 +2,5 @@
     <small>Submitted by &nbsp;&nbsp;<b style=color:black>{{quote.submitter}}</b> &nbsp;&nbsp;on {{quote.submissionDate|date}}  ({{quote.submissionDate|dateSubmitted}} day(s) ago)</small><br>
     <button class="btn" appHighlightVote><i class="fas fa-thumbs-up"></i>&nbsp;like</button>&nbsp;&nbsp;
     <button class="btn" appHighlightVote><i class="fas fa-thumbs-down"></i>&nbsp;dislike</button>&nbsp;&nbsp;
-    <button class="btn" style="color: red;"><i class="fas fa-trash-alt"></i>&nbsp;Delete</button>
+    <button class="btn" style="color: red;" (click)= 'Delete(true)'><i class="fas fa-trash-alt"></i>&nbsp;Delete</button>
 </div>

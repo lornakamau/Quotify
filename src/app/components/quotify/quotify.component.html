@@ -15,7 +15,7 @@
                     <small style="float: right;" (click)="toggleDetails(i)">see more</small>
                   </blockquote>
                 </div>
-                <app-quote-details *ngIf='quote.showDetails' [quote]='quote'></app-quote-details>  
+                <app-quote-details *ngIf='quote.showDetails' [quote]='quote' (deleteQuote) ='quoteDeleted($event,i)'></app-quote-details>  
             </div>
         </div>
         <div class="col-md-5">

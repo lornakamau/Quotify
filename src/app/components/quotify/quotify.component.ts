@@ -18,6 +18,11 @@ export class QuotifyComponent implements OnInit {
   toggleDetails(index){
     this.quotes[index].showDetails = !this.quotes[index].showDetails;
   }
+  quoteDeleted(deleteQuote, index){
+    if (deleteQuote){
+      this.quotes.splice(index,1)
+    }
+  }
   constructor() { }
 
   ngOnInit(): void {
