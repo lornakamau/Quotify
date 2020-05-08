@@ -43,6 +43,10 @@ export class QuotifyComponent implements OnInit {
     highestUpVote = quotesUpvote[0]
     return highestUpVote;
   }
+
+  addNewQuote(quote){
+    this.quotes.unshift(quote)
+  }
   constructor() { }
 
   ngOnInit(): void {
