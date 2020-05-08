@@ -1,0 +1,18 @@
+<form #quoteForm='ngForm'>
+    <div class="form-group">
+        <label for="quote">Your Quote:</label>
+        <textarea class="form-control" id="quote" rows="4" required></textarea><!--</textarea>[(ngModel)]="newquotes.quote" name="quote" #quote='ngModel' placeholder="The quote..."-->
+        <!--div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">A quote is required</div-->
+    </div>
+    <div class="form-group">
+        <label for="author">Quote Author:</label>
+        <input type="text" required class="form-control" id="author" style="width: 50%"><!--[(ngModel)]="newquotes.author" name="author" #author='ngModel' placeholder="Author's name..."-->
+        <!--div [hidden]="author.valid || author.pristine" class="alert alert-danger" style="width: 50%">Author is required</div-->
+    </div>
+    <div class="form-group">
+        <label for="submitter">Submitted by:</label>
+        <input type='text' class="form-control" id="submitter" required style="width: 50%"><!--[(ngModel)]="newquotes.submitter" name="submitter" #submitter='ngModel' placeholder="Your name..."-->
+        <!--div [hidden]="submitter.valid || submitter.pristine" class="alert alert-danger" style="width: 50%">Please enter your name</div-->
+    </div>
+    <button type="submit" class="btn">Add Quote</button>
+</form>
