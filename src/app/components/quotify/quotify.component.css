@@ -23,11 +23,8 @@ h1{
 .row{
   padding: 3%;
 }
-.col-md-1{
+.col-sm-4, .col-sm-8{
   padding: 0;
-}
-.col-md-5{
-  padding-bottom: 3%;
 }
 .blockquote {
   font-size: 1rem;
@@ -36,5 +33,16 @@ button{
 padding: 2px;
 }
 .card{
-  margin:5%;
+  margin:3%;
+  width: 20rem;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  transition: all 0.2s ease-in-out;
+}
+.card:hover{
+  transform: translateY(-7px);
+}
+.cards{ /*allows for cards to append side by side*/
+  display: flex;
+  flex-wrap: wrap;
 }

@@ -44,6 +44,12 @@ export class QuotifyComponent implements OnInit {
     return highestUpVote;
   }
 
+  get sortQuotes() {
+    return this.quotes.sort((a, b) => {
+      return <any>new Date(b.submissionDate) - <any>new Date(a.submissionDate);
+    });
+  }  
+
   addNewQuote(quote){
     this.quotes.unshift(quote)
   }

@@ -4,11 +4,11 @@
         <p class="text-center">Inspire before you expire</p>
         <hr style="width: 50%;">
     </div>
-    <div class="row">
-        <div class="col-md-1"></div>
-        <div class="col-md-5">
+      <div class="row">
+        <div class="col-sm-8">
           <h3 class="text-center" >Be inspired!</h3>
-            <div class="card" *ngFor='let quote of quotes; let i= index'>
+            <div class="cards">
+              <div class="card" *ngFor='let quote of sortQuotes let i= index'>
                 <div class="card-body" appHighlightQuote *ngIf="highlightHighest() === quote.upVote && quote.upVote > 0">
                   <blockquote class="blockquote mb-0">
                     <p>{{quote.quote}}</p>
@@ -25,12 +25,12 @@
                 </div>
                 <app-quote-details *ngIf='quote.showDetails' [quote]='quote' (deleteQuote) ='quoteDeleted($event,i)'></app-quote-details>  
             </div>
+            </div>
         </div>
-        <div class="col-md-5">
+        <div class="col-sm-4">
           <h3 class="text-center">Inspire someone.</h3>
             <app-quote-form (addQuote)="addNewQuote($event)" ></app-quote-form>
         </div>
-        <div class="col-md-1"></div>
     </div>
 </div>
 
