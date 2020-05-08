@@ -25,7 +25,7 @@ export class QuotifyComponent implements OnInit {
     if(this.show)  
       this.showMore = "see less";
     else
-      this.showMore[index] = "see more";
+      this.showMore = "see more";
   }
   quoteDeleted(deleteQuote, index){
     if (deleteQuote){
