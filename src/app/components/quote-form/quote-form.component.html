@@ -1,4 +1,4 @@
-<form (ngSubmit)='submitQuote(quoteForm)' #quoteForm='ngForm'>
+<form (ngSubmit)='submitQuote(quoteForm) ;quoteForm.resetForm({})' #quoteForm='ngForm'>
     <div class="form-group">
         <label for="quote">Enter the quote:</label>
         <textarea class="form-control" id="quote" rows="4" required [(ngModel)]="newQuote.quote" name="quote" #quote='ngModel' placeholder="What's the quote?"></textarea>
@@ -16,4 +16,3 @@
     </div>
     <button type="submit" class="btn">Add Quote</button>
 </form>
-{{diagnostic}}
