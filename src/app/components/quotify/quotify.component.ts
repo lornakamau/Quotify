@@ -27,9 +27,12 @@ export class QuotifyComponent implements OnInit {
     this.quotes[index].smallText = 'see more';
   }
   quoteDeleted(deleteQuote, index){
-    if (deleteQuote){
-      this.quotes.splice(index,1)
+    if (deleteQuote) {
+      let deleteQuote = confirm(`Are you sure you want to delete your quote?`)
+      if(deleteQuote){
+      this.quotes.splice(index,1);
     }
+  }
   }
   highlightHighest(){
     let quotesUpvote = []
