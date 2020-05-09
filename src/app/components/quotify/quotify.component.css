@@ -26,7 +26,7 @@ h1 {
 }
 
 .row {
-  padding: 3%;
+  padding: 2%;
 }
 
 .blockquote {
@@ -61,6 +61,7 @@ small {
   /* changes cursor for small text */
   cursor: pointer;
 }
-.nothingToSee{
+
+.nothingToSee {
   padding: 8%;
 }
