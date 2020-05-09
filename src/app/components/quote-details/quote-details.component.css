@@ -1,8 +1,9 @@
-.card-footer{
-    padding: 1%;
-    margin-bottom: 0 !important;
-    background-color: white;
+.card-footer { 
+  padding: 1%;
+  margin-bottom: 0 !important;
+  background-color: white;
 }
-button{
-    float: right;
+
+button { /*positions all buttons*/
+  float: right;
 }

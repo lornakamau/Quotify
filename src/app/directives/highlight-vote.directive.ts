@@ -1,22 +1,22 @@
-import { Directive, ElementRef, HostListener } from '@angular/core';
+import {
+  Directive,
+  ElementRef,
+  HostListener
+} from '@angular/core';
 
 @Directive({
   selector: '[appHighlightVote]'
 })
 export class HighlightVoteDirective {
 
-  constructor(private elem:ElementRef) {}
+  constructor(private elem: ElementRef) {}
 
-  @HostListener("click") onClicks(){
-    this.text("rgb(93, 228, 255)")
+  @HostListener("click") onClicks() {
+    this.voteColor("rgb(93, 228, 255)")
   }
 
-  @HostListener("dblclick") onDoubleClicks(){
-    this.text("black")
-  }
-
-  private text(action:string){ 
-    this.elem.nativeElement.style.color=action;
+  private voteColor(action: string) {
+    this.elem.nativeElement.style.color = action;
   }
 
 }
