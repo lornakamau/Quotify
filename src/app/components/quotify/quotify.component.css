@@ -23,9 +23,6 @@ h1{
 .row{
   padding: 3%;
 }
-.col-sm-4, .col-sm-8{
-  padding: 0;
-}
 .blockquote {
   font-size: 1rem;
 }
@@ -45,4 +42,7 @@ padding: 2px;
 .cards{ /*allows for cards to append side by side*/
   display: flex;
   flex-wrap: wrap;
+}
+.small{
+  cursor: pointer;
 }
