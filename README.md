@@ -1,3 +1,4 @@
+[![codebeat badge](https://codebeat.co/badges/6fa52642-7e3a-4135-b2f2-35a3d0c53b4b)](https://codebeat.co/projects/github-com-lornakamau-quotify-master)
 # Quotify
 #### An application where users can upload quotes and have those quotes voted on , 09/05/2020.
 #### By Lorna Kamau
