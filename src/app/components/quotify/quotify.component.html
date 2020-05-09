@@ -13,14 +13,14 @@
                   <blockquote class="blockquote mb-0">
                     <p>{{quote.quote}}</p>
                     <footer class="blockquote-footer"><cite title="Source Title">{{quote.author|titlecase}}</cite></footer>
-                    <small style="float: right;" (click)="toggleDetails(i)">{{showMore}}</small>
+                    <small style="float: right;" (click)="toggleDetails(i); toggleText(i)">{{quote.smallText}}</small>
                   </blockquote>
                 </div>
                 <div class="card-body" *ngIf="highlightHighest() !== quote.upVote || quote.upVote === 0">
                     <blockquote class="blockquote mb-0">
                       <p>{{quote.quote}}</p>
                       <footer class="blockquote-footer"><cite title="Source Title">{{quote.author|titlecase}}</cite></footer>
-                      <small style="float: right;" (click)="toggleDetails(i)" [ngStyle]="{'innerHTML': textContent}">{{showMore}}</small>
+                      <small style="float: right;" (click)="toggleDetails(i); toggleText(i)">{{quote.smallText}}</small>
                     </blockquote>
                 </div>
                 <app-quote-details *ngIf='quote.showDetails' [quote]='quote' (deleteQuote) ='quoteDeleted($event,i)'></app-quote-details>  
